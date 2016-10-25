@@ -44,7 +44,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="flex-auto flex flex-column">
         {
           Object.keys(this.state.flexProps).map(flexProperty => {
             
@@ -53,7 +53,7 @@ class App extends Component {
           })
         }
         
-        <FlexContainer containerProps={this.state.containerProps} />
+        <FlexContainer containerProps={this.state.containerProps} itemProps={this.state.childProps} />
       </div>
     );
   }

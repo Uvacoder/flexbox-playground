@@ -6,13 +6,14 @@ const FlexContainer = ({
 }) => {
 
   const sx = Object.assign({}, props.containerProps)
+  const itemProps = Object.assign({}, props.itemProps)
 
   return (
-    <div className="br3 pa2 h5 bg-light-gray flex" style={sx}>
-      <FlexItem />
-      <FlexItem />
-      <FlexItem />
-      <FlexItem />
+    <div className="pv4 ph3 bt bb b--black-10 bg-light-gray flex flex-auto" style={sx}>
+      <FlexItem itemProps={itemProps} />
+      <FlexItem itemProps={itemProps} />
+      <FlexItem itemProps={itemProps} />
+      <FlexItem itemProps={itemProps} />
     </div>
   )
 }
