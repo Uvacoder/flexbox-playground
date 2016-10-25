@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import FlexItem from './FlexItem';
 
-class FlexContainer extends Component {
-  constructor() {
-    super();
-  }
+const FlexContainer = ({
+  ...props
+}) => {
 
-  render() {
+  const sx = Object.assign({}, props.containerProps)
 
-  }
+  return (
+    <div className="br3 pa2 h5 bg-light-gray flex" style={sx}>
+      <FlexItem />
+      <FlexItem />
+      <FlexItem />
+      <FlexItem />
+    </div>
+  )
 }
 
-export default FlexContainer;
+export default FlexContainer
