@@ -21,27 +21,22 @@ export default class FlexItem extends Component {
   
   handleOrderChange (e) {
     this.setState({ order: e.target.value })
-    console.log('state is', this.state)
   }
   
   handleGrowChange (e) {
     this.setState({ flexGrow: e.target.value })
-    console.log('state is', this.state)
   }
   
   handleShrinkChange (e) {
     this.setState({ flexShrink: e.target.value })
-    console.log('state is', this.state)
   }
   
   handleBasisChange(e) {
     this.setState({ flexBasis: e.target.value })
-    console.log('state is', this.state)
   }
   
   handleAlignSelfChange (e) {
     this.setState({ alignSelf: e.target.value })
-    console.log('state is', this.state)
   }
   
   render() {
@@ -52,7 +47,7 @@ export default class FlexItem extends Component {
     
     return (
       <div className="pa1" style={sx}>
-        <div className="br3 bg-blue pv3 pr2 pl0">
+        <div className="br3 bg-blue pv3 pr2 pl0 h-100">
           <div className="mb3">
             <label className={labelClassNames}>order:</label>
             <input type="number" placeholder="order" className={inputClassNames} value={this.state.order} onChange={this.handleOrderChange} />
